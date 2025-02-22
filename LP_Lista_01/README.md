@@ -108,11 +108,10 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
     comparison2 --> |Não| output2[/Terceiro número é o maior!/]
     comparison1 --> |Não| comparison3{Segundo número > Terceiro número?}
     comparison3 --> |Sim| output3[/Segundo número é o maior!/]
-    comparison3 --> |Não| output4[/Terceiro número é o maior!/]
+    comparison3 --> |Não| output2
     output1 --> finish([ Fim ])
     output2 --> finish
-    output3 --> finish
-    output4 --> finish
+    output3 --> finish  
 
    ```
    
@@ -120,19 +119,43 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-   start(( Início )) --> input[\Digite um número/]
-   input --> input2[numero >=0]
-   verification --> |SIM| input2    
+    A[Início] --> B[Entrada do número]
+    B --> C{Número < 0?}
+    C -->|Sim| D[Erro: Número inválido]
+    C -->|Não| E{Número == 0?}
+    E -->|Sim| F[Fatorial = 1]
+    E -->|Não| G[Fatorial = 1]
+    G --> H{Número > 1?}
+    H -->|Sim| I[Multiplicar o fatorial por número]
+    I --> G
+    H -->|Não| J[Exibir o fatorial]
+    D --> K[Fim]
+    F --> K
+    J --> K
    ```
    
 9. Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
    ```mermaid
    flowchart TD
+    A[Início] --> B[Entrada do número]
+    B --> C{Número % 2 == 0?}
+    C -->|Sim| D[O número é par]
+    C -->|Não| E[O número é ímpar]
+    D --> F[Fim]
+    E --> F
+
    ```
-   
+    
 10. Elabore um fluxograma para verificar se um número digitado pelo usuário é primo.
-   
    ```mermaid
    flowchart TD
+ A[Início] --> B[Entrada do número]
+    B --> C{Número < 2?}
+    C -->|Sim| D[Não é primo]
+    C -->|Não| E{Número divisível por 2 ou outros números até raiz quadrada?}
+    E -->|Sim| D
+    E -->|Não| F[É primo]
+    D --> G[Fim]
+    F --> G
 
    ```
