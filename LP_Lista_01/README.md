@@ -156,6 +156,5 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
     E -->|Sim| D
     E -->|Não| F[É primo]
     D --> G[Fim]
-    F --> G
-
+    F --> Gg
    ```
