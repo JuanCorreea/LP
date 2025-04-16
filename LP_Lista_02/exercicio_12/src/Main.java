@@ -14,7 +14,8 @@ public class Main {
         in = new Scanner(System.in);
         n2 = in.nextDouble();
 
-        result = (n1+n2)/2;
+        peso = n2 * 2;
+        result = (n1 + peso)/3;
 
         System.out.println("A média das somas é: "+ result);
 
