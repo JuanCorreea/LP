@@ -10,16 +10,14 @@ ___
 
 > O objetivo desta aula é exercitar o raciocínio lógico para a criação de algoritmos através de fluxogramas.  
 
-O fluxo de um algorítmo poder ser representado graficamente através de fluxogramas. Um conjunto de símbolos, representam cada ação realizada pelo programa, além disso, setas conectam estes símbolos uns com os outros indicando a sequencia em que as ações são executadas.
+O fluxo de um algorítmo pode ser representado graficamente através de fluxogramas. Um conjunto de símbolos, representam cada ação realizada pelo programa, além disso, setas conectam estes símbolos uns com os outros indicando a sequencia em que as ações são executadas.
 
 Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cainaantunes/Aula-01-Fluxogramas-188bde521b3b80de90f7dbd9407af71e)
-
 ***
 
 1. Crie o fluxograma de um programa que solicita que o usuário digite sua nota e em seguida o programa exibe se o aluno foi “Aprovado” ou “Reprovado”. Leve em consideração que a nota deve estar entre 0 e 100 e que a condição para aprovação é ter uma nota igual ou superior à 50.
    
     ```mermaid
-   
     flowchart TD
         start(( Início )) --> input[\ Digite sua Nota \]
         input --> verification{ Nota >= 50? }
@@ -29,7 +27,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
         B --> finish
     ```
    
-2. Altere o exemplo anterior, acrescentando as seguintes condições: para ser o aprovado, o aluno precisar ter nota igual ou superior à 50 e frequência igual ou superior a 75%.
+2. Altere o exemplo anterior, acrescentando as seguintes condições: para ser o aprovado, o aluno precisa ter nota igual ou superior à 50 e frequência igual ou superior a 75%.
    
    ```mermaid
    flowchart TD
@@ -92,7 +90,6 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
     output1 --> finish([ Fim ])
     output2 --> finish
     output3 --> finish
-
    ```
    
 7. Crie um fluxograma que leia três números e determine o maior entre eles.
@@ -156,5 +153,9 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
     E -->|Sim| D
     E -->|Não| F[É primo]
     D --> G[Fim]
+<<<<<<< HEAD
     F --> Gg
+=======
+    F --> G
+>>>>>>> 0a0be80a63757290b3a6bff405ccea0c88bfcc6f
    ```
