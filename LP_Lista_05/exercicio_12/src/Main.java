@@ -21,4 +21,4 @@ public class Main {
 
         System.out.println("Determinante da matriz 3x3: " + determinante);
     }
-} 
+}
